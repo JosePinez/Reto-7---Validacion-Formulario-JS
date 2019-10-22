@@ -16,8 +16,8 @@
             <section>
                 <article>
                     <h2>FORMULARIO DE INSCRIPCIÓN</h2>
-                    <form  name="formulario" id="formulario"  onsubmit="return validar();">
-                        <label for=""><input type="text" id="nombre" name="nombre" placeholder="Nombre" ></label>
+                    <form  name="formulario" id="formulario">
+                        <label id="label"><input type="text" id="nombre" name="nombre" placeholder="Nombre" onblur="validaNombre()" onfocus="borraInput()"></label>
                         <br>
                         <br>
                         <label for=""><input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" ></label>
@@ -26,7 +26,7 @@
                         <label for=""><input type="number" id="edad" name="edad" placeholder="Edad" min="0" ></label>
                         <br>
                         <br>
-                        <label for=""><input type="date" id="date" name="date" placeholder="Fecha Nacimiento"></label>
+                        <label for=""><input type="date" id="fecha" name="date" placeholder="Fecha Nacimiento"></label>
                         <br>
                         <br>
                         <label for=""><input type="email" id="email" name="email" placeholder="E-mail" ></label>
