@@ -73,12 +73,18 @@ function init(){
     formulario.enviar.addEventListener("click",validar,false);
 }
 */
+var existeError = false;
+formulario = document.getElementById("formulario");
 function validar() {
-    borraInput();
-    if(validaNombre() == false || validaApellidos() == false || validaEdad() == false || validaEdad() == false || validaEmail() == false || validaTel() == false){
-        return false;
-    }else{
-        return true;
+    validaNombre();
+    validaApellidos();
+    validaEdad();
+    validaEmail();
+    validaUsuario();
+    validaTel();
+    if(existeError){
+        formulario.submit();
+        alert("esos tios");
     }
 }
 function validaNombre() {

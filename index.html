@@ -17,34 +17,34 @@
                 <article>
                     <h2>FORMULARIO DE INSCRIPCIÓN</h2>
                     <form  name="formulario" id="formulario">
-                        <label id="labelNom"><input type="text" id="nombre" name="nombre" placeholder="Nombre" onblur="validaNombre()" onfocus="borraNombre()"></label>
+                        <label id="labelNom"><input type="text" id="nombre" name="nombre" placeholder="Nombre" ></label>
                         <br>
                         <br>
-                        <label id="labelApes"><input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" onblur="validaApellidos()" onfocus="borraApellidos()"></label>
+                        <label id="labelApes"><input type="text" id="apellidos" name="apellidos" placeholder="Apellidos"></label>
                         <br>
                         <br>
-                        <label id="labelEdad"><input type="number" id="edad" name="edad" placeholder="Edad" min="0" onblur="validaEdad()" onfocus="borraEdad()"></label>
+                        <label id="labelEdad"><input type="number" id="edad" name="edad" placeholder="Edad" min="0"></label>
                         <br>
                         <br>
                         <label for=""><input type="date" id="fecha" name="date" placeholder="Fecha Nacimiento"></label>
                         <br>
                         <br>
-                        <label id="labelEmail"><input type="email" id="email" name="email" placeholder="E-mail" onblur="validaEmail()" onfocus="borraEmail()"></label>
+                        <label id="labelEmail"><input type="email" id="email" name="email" placeholder="E-mail" ></label>
                         <br>
                         <br>
-                        <label id="labelTel"><input type="tel" name="tel" id="tel" placeholder="Teléfono (xxx-xx-xx-xx)" onblur="validaTel()" onfocus="borraTel()"></label>
+                        <label id="labelTel"><input type="tel" name="tel" id="tel" placeholder="Teléfono (xxx-xx-xx-xx)" ></label>
                         <br>
                         <br>
-                        <label id="labelUsu"><input type="text" name="usuario" id="usuario" placeholder="Usuario" onblur="validaUsuario()" onfocus="borraUsuario()"></label>
+                        <label id="labelUsu"><input type="text" name="usuario" id="usuario" placeholder="Usuario"></label>
                         <br>
                         <br>
                         <label for=""><input type="password" name="pass" id="pass" placeholder="Contraseña" ></label>
                         <br>
                         <br>
-                        <input type="submit" placeholder = "Enviar" name="enviar" id="enviar" onclick="validar()">
+                        <input type="button" placeholder = "Enviar" name="enviar" id="enviar" value="Enviar" onclick="validar()">
                         <br>
                         <br>
-                        <input type="reset" id="reset" name="reset" onclick="resetear()">
+                        <input type="button" id="reset" name="reset" onclick="resetear()" value="Restablecer">
                 </article>
             </section>
         </form>
