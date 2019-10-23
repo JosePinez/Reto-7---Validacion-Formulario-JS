@@ -82,9 +82,7 @@ footer{
 }
 .campoErroneo{
     border: 3px solid red;
-    background-color: lightcoral;
 }
 .campoValido{
     border: 3px solid green;
-    background-color: rgb(161, 228, 161);
 }
