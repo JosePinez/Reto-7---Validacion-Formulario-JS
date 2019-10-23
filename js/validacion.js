@@ -84,7 +84,7 @@ function validar() {
     validaTel();
     if(existeError){
         formulario.submit();
-        alert("esos tios");
+        alert("REGISTRO ENVIADO CORRECTAMENTE");
     }
 }
 function validaNombre() {
@@ -151,7 +151,7 @@ function borraNombre() {
     let input = document.getElementById("nombre");
     input.classList.remove("campoErroneo");
     input.classList.remove("campoValido");
-    label = document.getElementById("labelNom");
+    let label = document.getElementById("labelNom");
     let div = document.getElementById("errorNom");
     label.removeChild(div);
 }
@@ -159,7 +159,7 @@ function borraApellidos() {
     let input = document.getElementById("apellidos");
     input.classList.remove("campoErroneo");
     input.classList.remove("campoValido");
-    label = document.getElementById("labelApes");
+    let label = document.getElementById("labelApes");
     let div = document.getElementById("errorApes");
     label.removeChild(div);
 }
@@ -189,7 +189,7 @@ function borraEdad() {
     let input = document.getElementById("edad");
     input.classList.remove("campoErroneo");
     input.classList.remove("campoValido");
-    label = document.getElementById("labelEdad");
+    let label = document.getElementById("labelEdad");
     let div = document.getElementById("errorEdad");
     label.removeChild(div);
 }
@@ -218,7 +218,7 @@ function borraEmail() {
     let input = document.getElementById("email");
     input.classList.remove("campoErroneo");
     input.classList.remove("campoValido");
-    label = document.getElementById("labelEmail");
+    let label = document.getElementById("labelEmail");
     let div = document.getElementById("errorEmail");
     label.removeChild(div);
 }
@@ -249,7 +249,7 @@ function borraTel(){
     let input = document.getElementById("tel");
     input.classList.remove("campoErroneo");
     input.classList.remove("campoValido");
-    label = document.getElementById("labelTel");
+    let label = document.getElementById("labelTel");
     let div = document.getElementById("errorTel");
     label.removeChild(div);
 }
@@ -287,7 +287,7 @@ function borraUsuario() {
     let input = document.getElementById("usuario");
     input.classList.remove("campoErroneo");
     input.classList.remove("campoValido");
-    label = document.getElementById("labelUsu");
+    let label = document.getElementById("labelUsu");
     let div = document.getElementById("errorUsu");
     label.removeChild(div);
 }
