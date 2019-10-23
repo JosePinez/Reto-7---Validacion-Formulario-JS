@@ -99,11 +99,15 @@ function validaNombre() {
         input.classList.add("campoErroneo");
         div.innerHTML = "El campo nombre es obligatorio";
         input.classList.add("campoErroneo");
-        $("#labelNom").appendChild(div);
+        if(! document.getElementById("errorNom")){
+            $("#labelNom").appendChild(div);
+        }
         existeError = false;
     } else if (!nombre_reggex.test(nombre)) {
         div.innerHTML = "El campo nombre solo puede contener letras, la primera en mayusculas";
-        $("#labelNom").appendChild(div);
+        if(! document.getElementById("errorNom")){
+            $("#labelNom").appendChild(div);
+        }
         input.classList.add("campoErroneo");
         existeError = false;
     } else {
@@ -125,11 +129,15 @@ function validaApellidos() {
         input.classList.add("campoErroneo");
         div.innerHTML = "El campo apellidos es obligatorio";
         input.classList.add("campoErroneo");
-        $("#labelApes").appendChild(div);
+        if(! document.getElementById("errorApes")){
+            $("#labelApes").appendChild(div);
+        }
         existeError = false;
     } else if (!apes_reggex.test(apellidos)) {
         div.innerHTML = "El campo apellidos solo puede contener letras, la primera en mayusculas";
-        $("#labelApes").appendChild(div);
+        if(! document.getElementById("errorApes")){
+            $("#labelApes").appendChild(div);
+        }
         input.classList.add("campoErroneo");
         existeError = false;
     } else {
@@ -144,7 +152,7 @@ function borraNombre() {
     input.classList.remove("campoErroneo");
     input.classList.remove("campoValido");
     label = document.getElementById("labelNom");
-    div = document.getElementById("errorNom");
+    let div = document.getElementById("errorNom");
     label.removeChild(div);
 }
 function borraApellidos() {
@@ -152,7 +160,7 @@ function borraApellidos() {
     input.classList.remove("campoErroneo");
     input.classList.remove("campoValido");
     label = document.getElementById("labelApes");
-    div = document.getElementById("errorApes");
+    let div = document.getElementById("errorApes");
     label.removeChild(div);
 }
 function validaEdad() {
@@ -166,7 +174,9 @@ function validaEdad() {
         input.classList.add("campoErroneo");
         div.innerHTML = "Debes ser mayor de edad para registrarte";
         input.classList.add("campoErroneo");
-        $("#labelEdad").appendChild(div);
+        if(! document.getElementById("errorEdad")){
+            $("#labelEdad").appendChild(div);
+        }
         existeError = false;
     } else {
         document.formulario.nombre.value = edad;
@@ -180,7 +190,7 @@ function borraEdad() {
     input.classList.remove("campoErroneo");
     input.classList.remove("campoValido");
     label = document.getElementById("labelEdad");
-    div = document.getElementById("errorEdad");
+    let div = document.getElementById("errorEdad");
     label.removeChild(div);
 }
 function validaEmail() {
@@ -192,7 +202,9 @@ function validaEmail() {
     let input = document.getElementById("email");
     if (!email_reggex.test(email)) {
         div.innerHTML = "El campo email debe estar en el formato adecuado: ejemplo@ejemplo.com";
-        $("#labelEmail").appendChild(div);
+        if(! document.getElementById("errorEmail")){
+            $("#labelEmail").appendChild(div);
+        }
         input.classList.add("campoErroneo");
         existeError = false;
     } else {
@@ -207,12 +219,12 @@ function borraEmail() {
     input.classList.remove("campoErroneo");
     input.classList.remove("campoValido");
     label = document.getElementById("labelEmail");
-    div = document.getElementById("errorEmail");
+    let div = document.getElementById("errorEmail");
     label.removeChild(div);
 }
 function validaTel(){
     var tel = document.getElementById("tel");
-    var tel_reggex = /^[\d]{3}[-]*([\d]{2}[-]*){2}[\d]{2}$/;
+    var tel_reggex = /^[9|6|7][0-9]{8}$/;
     let div = document.createElement("div");
     div.classList.add("error");
     div.setAttribute("id", "errorTel");
@@ -222,7 +234,9 @@ function validaTel(){
         input.classList.add("campoErroneo");
         div.innerHTML = "El campo teléfono debe tener el siguiente formato: 666-66-66-66";
         input.classList.add("campoErroneo");
-        $("#labelTel").appendChild(div);
+        if(! document.getElementById("errorTel")){
+            $("#labelTel").appendChild(div);
+        }
         existeError = false;
     }else{
         document.formulario.tel.value = tel;
@@ -236,7 +250,7 @@ function borraTel(){
     input.classList.remove("campoErroneo");
     input.classList.remove("campoValido");
     label = document.getElementById("labelTel");
-    div = document.getElementById("errorTel");
+    let div = document.getElementById("errorTel");
     label.removeChild(div);
 }
 function validaUsuario() {
@@ -251,11 +265,15 @@ function validaUsuario() {
         input.classList.add("campoErroneo");
         div.innerHTML = "El campo usuario es obligatorio";
         input.classList.add("campoErroneo");
-        $("#labelUsu").appendChild(div);
+        if(! document.getElementById("errorUsu")){
+            $("#labelUsu").appendChild(div);
+        }
         existeError = false;
     } else if (!usuario_reggex.test(usuario)) {
         div.innerHTML = "El campo usuario solo puede contener letras, la primera en mayusculas";
-        $("#labelUsu").appendChild(div);
+        if(! document.getElementById("errorUsu")){
+            $("#labelUsu").appendChild(div);
+        }
         input.classList.add("campoErroneo");
         existeError = false;
     } else {
@@ -270,7 +288,7 @@ function borraUsuario() {
     input.classList.remove("campoErroneo");
     input.classList.remove("campoValido");
     label = document.getElementById("labelUsu");
-    div = document.getElementById("errorUsu");
+    let div = document.getElementById("errorUsu");
     label.removeChild(div);
 }
 function resetear(){
